@@ -1,0 +1,403 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "barcodeNumber",
+						"type": "string"
+					}
+				],
+				"name": "FakeProductReported",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "barcodeNumber",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					}
+				],
+				"name": "ProductAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "barcodeNumber",
+						"type": "string"
+					}
+				],
+				"name": "ProductDeleted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "barcodeNumber",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					}
+				],
+				"name": "ProductUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "barcodeNumber",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isGenuine",
+						"type": "bool"
+					}
+				],
+				"name": "ProductVerified",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_adminAddress",
+						"type": "address"
+					}
+				],
+				"name": "addAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_productSerialId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_productName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_dateOfManufacture",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_originOfProduct",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_expiryDate",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_sellerInformation",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_barcodeNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isGenuine",
+						"type": "bool"
+					}
+				],
+				"name": "addProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "admins",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_barcodeNumber",
+						"type": "string"
+					}
+				],
+				"name": "deleteProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "products",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "productSerialId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "dateOfManufacture",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "originOfProduct",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "expiryDate",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sellerInformation",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "barcodeNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isGenuine",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_barcodeNumber",
+						"type": "string"
+					}
+				],
+				"name": "reportFakeProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_barcodeNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_productSerialId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_productName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_dateOfManufacture",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_originOfProduct",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_expiryDate",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_sellerInformation",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isGenuine",
+						"type": "bool"
+					}
+				],
+				"name": "updateProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_barcodeNumber",
+						"type": "string"
+					}
+				],
+				"name": "verifyProduct",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "productSerialId",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "productName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "dateOfManufacture",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "originOfProduct",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "expiryDate",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "sellerInformation",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "barcodeNumber",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isGenuine",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct ProductVerification.Product",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ProductVerification.sol": "ProductVerification"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ProductVerification.sol": {
+			"keccak256": "0x2efbc903e52593fb5eb60518c97692bb8806886174ca5648e5aa0ce3c00c4590",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://937757b02f94ed76122e1862dad5edb55f89b8fc91533ab224af492e0dec71f0",
+				"dweb:/ipfs/QmVHbHN3rwPQgQ7dKcnjkgGzC8Tt4JWhTYoQFAxoF65g8e"
+			]
+		}
+	},
+	"version": 1
+}

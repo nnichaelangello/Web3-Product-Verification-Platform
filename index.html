@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Verification System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Product Verification System</h1>
+
+    <!-- Admin Section -->
+    <div id="adminSection">
+        <h2>Admin Section</h2>
+        <input type="text" id="adminAddress" placeholder="Enter Admin Address">
+        <button onclick="loginAdmin()">Login as Admin</button>
+
+        <div id="adminActions" style="display:none;">
+            <h3>Add Product</h3>
+            <input type="text" id="productSerialId" placeholder="Product Serial Id">
+            <input type="text" id="productName" placeholder="Product Name">
+            <input type="text" id="dateOfManufacture" placeholder="Date of Manufacture">
+            <input type="text" id="originOfProduct" placeholder="Origin of Product">
+            <input type="text" id="expiryDate" placeholder="Expiry Date">
+            <input type="text" id="sellerInformation" placeholder="Seller Information">
+            <input type="text" id="barcodeNumber" placeholder="Barcode Number">
+            <button onclick="addProduct()">Add Product</button>
+
+            <h3>Verify Product</h3>
+            <input type="text" id="verifyBarcode" placeholder="Enter Barcode Number">
+            <button onclick="verifyProduct()">Verify Product</button>
+            <div id="productDetails"></div>
+        </div>
+    </div>
+
+    <!-- User Section -->
+    <div id="userSection">
+        <h2>User Section</h2>
+        <input type="text" id="userBarcode" placeholder="Enter Barcode Number">
+        <button onclick="verifyProductUser()">Verify Product</button>
+        <button onclick="reportFakeProduct()">Report Fake Product</button>
+        <div id="userProductDetails"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
